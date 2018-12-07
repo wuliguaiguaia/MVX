@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url(./assets/bg.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            width: 100%;
+            background: rgba(142, 120, 114, 0.59);
+            color: #fff;
+            padding: 10px;
+            transform: translateY(10px)
+        }
+
+        h1 button {
+            background: #75635e;
+            color: #fff;
+            padding: 10px;
+            float: right;
+        }
+
+        #app {
+            background: rgba(142, 120, 114, 0.59);
+            /* width: 270px; */
+            float: left;
+            padding: 20px;
+            margin-left: 10%;
+            margin-top: 50px;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #eae8e8;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #75635e;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="audio" src="./assets/music.mp3" loop></audio>
+
+    <h1>Hello,everyone~
+        <button id="musicBtn" onclick="audio.play()">播放/暂停</button>
+    </h1>
+    <div id="app">
+        <!-- <h3>订购<span id="num">{{num}}</span>只<span id="name">{{name}}</span>~</h3>
+        <button id="addOne">再来一只</button>
+        <button id="reduceOne">放弃一只</button>
+        <button id="reset">狠心清空</button> -->
+    </div>
+    <script>
+        let flag = false
+        musicBtn.onclick = (e) => {
+            flag = !flag;
+            flag ? audio.play() : audio.pause();
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
